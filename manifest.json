@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Form Fucker - Faker Brasileiro",
+  "version": "2.0.0",
+  "description": "Extensão que preenche formulários automaticamente com dados brasileiros realistas (nomes, emails, telefones, endereços, CPFs válidos). Faker completo para agilizar testes e desenvolvimento.",
+  "author": "Paulo Dev",
+  "homepage_url": "https://github.com/paulodev/form-fucker",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Form Fucker - Preencher Formulários",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
+  
