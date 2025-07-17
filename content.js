@@ -1,4 +1,4 @@
-// ��🇷 FAKER BRASILEIRO - Dados realistas para desenvolvimento
+
 const FakerBR = {
   // NOMES BRASILEIROS
   nomes: [
@@ -294,7 +294,6 @@ const FormUtils = {
   }
 };
 
-// 🚀 FUNÇÃO PRINCIPAL DE PREENCHIMENTO
 async function fillFormFields(autoSubmit = false) {
   const inputs = document.querySelectorAll('input, textarea, select');
   let preenchidos = 0;
@@ -508,7 +507,6 @@ async function fillFormFields(autoSubmit = false) {
   return preenchidos;
 }
 
-// 📨 Message listener para o popup
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'fillForm') {
     fillFormFields(message.autoSubmit).then(preenchidos => {
@@ -521,7 +519,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
-// 🎯 EASTER EGGS PARA DESENVOLVEDORES
 (() => {
   // Konami Code: ↑↑↓↓←→←→BA
   const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
@@ -562,7 +559,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
   });
 
-  // Dev Tools Easter Egg
   window.formFuckerDev = {
     version: '2.0.0',
     author: 'Paulo César',
@@ -576,7 +572,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     secret: '🇧🇷 Feito com amor no Brasil'
   };
 
-  // Console Easter Egg
   if (typeof console !== 'undefined' && console.log) {
     const styles = [
       'color: #ff6b6b',
